@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Portfolio – Meryem KADAM</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 	<header>
@@ -29,14 +30,36 @@
     <!-- Projects Section -->
     <section id="projects">
       <h2>Projects</h2>
-      <p>Coming soon! This is where your featured projects will live.</p>
-     <!-- 
-      <ul>
-        <li>Project 1</li>
-        <li>Project 2 </li>
-        <li>Project 3 </li>
-      </ul>
-      -->
+      
+        <div class="gallery">
+            <article class="project-card" role="listitem">
+                <h3 class="project-title">Lab css fundamentals</h3>
+                <button class="toggle-btn" project-expanded="false" project-controls="p1">Show Details</button>
+                <div id="p1" class="project-details is-hidden">
+                  Lab css fundamentals details
+                </div>
+            </article>
+
+
+            <article class="project-card" role="listitem">
+              <h3 class="project-title">Recipe Website Makeover</h3>
+              <button class="toggle-btn" project-expanded="false" project-controls="p2">Show Details</button>
+              <div id="p2" class="project-details is-hidden">
+              Recipe Website Makeover details
+              </div>
+            </article>
+
+
+            <article class="project-card" role="listitem">
+              <h3 class="project-title">Storage assignment</h3>
+              <button class="toggle-btn" project-expanded="false" project-controls="p3">Show Details</button>
+            <div id="p3" class="project-details is-hidden">
+            Storage assignment details
+            </div>
+            </article>
+      </div>
+
+
     </section>
 
     <!-- Contact Section -->
