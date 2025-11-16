@@ -133,6 +133,17 @@ input[type=submit]:hover {
   padding-top:.75rem; 
 }
 
+.input-error {
+  border-color: #ef4444;
+  outline-color: #ef4444;
+}
+
+.error-msg {
+  color: #b91c1c;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
 
 @media (max-width: 600px) {
  html, body { margin:0; padding:0; overflow-x:hidden; }
