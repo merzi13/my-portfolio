@@ -37,10 +37,17 @@ I’m passionate about learning, adapting, and growing as a developer — and I�
     <!-- Projects Section -->
     <section id="projects">
       <h2>Projects</h2>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="html">HTML & CSS</button>
+        <button class="filter-btn" data-filter="js">JavaScript</button>
+        <button class="filter-btn" data-filter="api">API</button>
+      </div>
       
         <div class="gallery">
 
-        <article class="project-card" role="listitem">
+        <article class="project-card" role="listitem" data-category="html">
           <img
             src="./images/project1.webp"
             alt="A scenic travel landscape with mountains and water"
@@ -69,7 +76,7 @@ I’m passionate about learning, adapting, and growing as a developer — and I�
         </article>
 
 
-        <article class="project-card" role="listitem">
+        <article class="project-card" role="listitem" data-category="js">
           <img
             src="./images/project2.webp"
             alt="A table with food ingredients and a recipe layout"
@@ -98,7 +105,7 @@ I’m passionate about learning, adapting, and growing as a developer — and I�
         </article>
 
        
-          <article class="project-card" role="listitem">
+          <article class="project-card" role="listitem" data-category="api">
             <img
               src="./images/project3.webp"
               alt="Abstract illustration of API requests and data flow"

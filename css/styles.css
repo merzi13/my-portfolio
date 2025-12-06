@@ -4,15 +4,16 @@
   --card-bg: #ffffff;
   --accent-color: #4f46e5;
   --border-color: #e0e0e0;
+  --muted-text:#4b5563;
 }
 
-/* Dark mode için değerler */
 body[data-theme="dark"] {
   --bg-color: #000000;
   --text-color: #e5e7eb;
   --card-bg: #111827;
   --accent-color: #22d3ee;
   --border-color: #374151;
+  --muted-text:#e5e7eb;
 }
 
 html {
@@ -118,19 +119,33 @@ input[type=submit]:hover {
   background-color:#303030;
 }
 
-
+.project-details{
+  color: var(--text-color);
+}
 
 .project-details.is-hidden { display: none; }
+
 .gallery { 
-    display:grid; 
-    grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); 
-    gap:1.25rem; margin-top:1rem; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: stretch;
   }
-.project-card { 
-  border:1px solid #e5e7eb; 
-  border-radius:14px; 
-  padding:1rem; 
-  box-shadow:0 4px 16px rgba(0,0,0,.05); 
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 0.9rem;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  box-sizing: border-box;
+  
+  max-width: none;
+  margin: 0;
+  float: none;
+  flex: 0 0 280px;
 }
 .project-title { margin:0 0 .25rem; }
 .toggle-btn { 
@@ -182,10 +197,13 @@ input[type=submit]:hover {
     opacity 0.3s ease;
 }
 
-/* Kartların hover efekti */
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-card.hidden {
+  display: none;
 }
 
 
@@ -234,7 +252,43 @@ input[type=submit]:hover {
     }
 
 
+    .filter-bar {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-color);
+}
+
+.filter-btn.active {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-color: var(--accent-color);
+}
+
+
 @media (max-width: 600px) {
+  .gallery{
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
  html, body { margin:0; padding:0; overflow-x:hidden; }
 
   header { width:100%; }
