@@ -1,3 +1,20 @@
+:root {
+  --bg-color: #f4f4f9;
+  --text-color: #222222;
+  --card-bg: #ffffff;
+  --accent-color: #4f46e5;
+  --border-color: #e0e0e0;
+}
+
+/* Dark mode için değerler */
+body[data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #e5e7eb;
+  --card-bg: #111827;
+  --accent-color: #22d3ee;
+  --border-color: #374151;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -8,7 +25,8 @@ html {
  	padding-bottom: 70px;
  	font-size: 16px;
  	letter-spacing: 0.2px;
-	background: #f9fafb;
+  background-color: var(--bg-color);
+  color: var(--text-color);
  	}
  header {
  	background: #111; 
@@ -71,7 +89,6 @@ html {
  }
 
  h2 {
-	color: #1f2937;
   	line-height: 1.2;
   	margin: 0 0 0.75rem;
  }
@@ -110,7 +127,6 @@ input[type=submit]:hover {
     gap:1.25rem; margin-top:1rem; 
   }
 .project-card { 
-  background:#fff; 
   border:1px solid #e5e7eb; 
   border-radius:14px; 
   padding:1rem; 
@@ -177,6 +193,45 @@ input[type=submit]:hover {
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
+
+.theme-toggle {
+      margin-left: 1rem;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #fff;
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: background .2s ease, color .2s ease, transform .1s ease, box-shadow .2s ease;
+    }
+
+  .theme-toggle:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,.18);
+    }
+
+    body.dark .theme-toggle {
+      background: #000;
+      color: #e5e7eb;
+      border-color: #4b5563;
+    }
+
+  .theme-toggle {
+        align-self: flex-start;
+      }
+
+    body.dark {
+      background: #000000;
+      color: #f9fafb;
+    }
+
+    body.dark footer {
+      background: #000000;
+    }
+
+    body.dark header {
+      background: #111;
+    }
 
 
 @media (max-width: 600px) {
