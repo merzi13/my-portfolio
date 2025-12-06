@@ -157,6 +157,28 @@ input[type=submit]:hover {
     }
 
 
+
+.project-card,
+.btn {
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Kartların hover efekti */
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
 @media (max-width: 600px) {
  html, body { margin:0; padding:0; overflow-x:hidden; }
 
